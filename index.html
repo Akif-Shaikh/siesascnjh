@@ -1,0 +1,2726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="https://siesascn.edu.in/images/sies_ascn_logo.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIES Journal of Humanities</title>
+    <style>
+        :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB versions for opacity control (Dark Mode) */
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    /* Background color tokens (Dark Mode) */
+    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+    /* Semantic Color Tokens (Dark Mode) */
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    /* Common style patterns - updated for dark mode */
+    --focus-ring: 0 0 0 3px var(--color-focus-ring);
+    --focus-outline: 2px solid var(--color-primary);
+    --status-bg-opacity: 0.15;
+    --status-border-opacity: 0.25;
+    --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+    /* RGB versions for dark mode */
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+/* Data attribute for manual theme switching */
+[data-color-scheme="dark"] {
+  /* RGB versions for opacity control (dark mode) */
+  --color-gray-400-rgb: 119, 124, 124;
+  --color-teal-300-rgb: 50, 184, 198;
+  --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-200-rgb: 245, 245, 245;
+
+  /* Colorful background palette - Dark Mode */
+  --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+  --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+  --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+  --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+  --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+  --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+  --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+  --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+  /* Semantic Color Tokens (Dark Mode) */
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-gray-200);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
+  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-error: var(--color-red-400);
+  --color-success: var(--color-teal-300);
+  --color-warning: var(--color-orange-400);
+  --color-info: var(--color-gray-300);
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+  /* Common style patterns - updated for dark mode */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for dark mode */
+  --color-success-rgb: var(--color-teal-300-rgb);
+  --color-error-rgb: var(--color-red-400-rgb);
+  --color-warning-rgb: var(--color-orange-400-rgb);
+  --color-info-rgb: var(--color-gray-300-rgb);
+}
+
+[data-color-scheme="light"] {
+  /* RGB versions for opacity control (light mode) */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  /* RGB versions for light mode */
+  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-error-rgb: var(--color-red-500-rgb);
+  --color-warning-rgb: var(--color-orange-500-rgb);
+  --color-info-rgb: var(--color-slate-500-rgb);
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+h2 {
+  font-size: var(--font-size-3xl);
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
+h4 {
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-md);
+}
+
+p {
+  margin: 0 0 var(--space-16) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--font-size-base) * 0.95);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+}
+
+code {
+  padding: var(--space-1) var(--space-4);
+}
+
+pre {
+  padding: var(--space-16);
+  margin: var(--space-16) 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--primary:active {
+  background: var(--color-primary-active);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn--secondary:active {
+  background: var(--color-secondary-active);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background: var(--color-secondary);
+}
+
+.btn--sm {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  padding: var(--space-10) var(--space-20);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+textarea.form-control {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+select.form-control {
+  padding: var(--space-8) var(--space-12);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: var(--select-caret-light);
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+/* Add a dark mode specific caret */
+@media (prefers-color-scheme: dark) {
+  select.form-control {
+    background-image: var(--select-caret-dark);
+  }
+}
+
+/* Also handle data-color-scheme */
+[data-color-scheme="dark"] select.form-control {
+  background-image: var(--select-caret-dark);
+}
+
+[data-color-scheme="light"] select.form-control {
+  background-image: var(--select-caret-light);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: var(--focus-outline);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+/* Card component */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__body {
+  padding: var(--space-16);
+}
+
+.card__header,
+.card__footer {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border-inner);
+}
+
+/* Status indicators - simplified with CSS variables */
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.status--success {
+  background-color: rgba(
+    var(--color-success-rgb, 33, 128, 141),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-success);
+  border: 1px solid
+    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
+}
+
+.status--error {
+  background-color: rgba(
+    var(--color-error-rgb, 192, 21, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-error);
+  border: 1px solid
+    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
+}
+
+.status--warning {
+  background-color: rgba(
+    var(--color-warning-rgb, 168, 75, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-warning);
+  border: 1px solid
+    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
+}
+
+.status--info {
+  background-color: rgba(
+    var(--color-info-rgb, 98, 108, 113),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-info);
+  border: 1px solid
+    rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
+}
+
+/* Container layout */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-16);
+  padding-left: var(--space-16);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-4 {
+  gap: var(--space-4);
+}
+.gap-8 {
+  gap: var(--space-8);
+}
+.gap-16 {
+  gap: var(--space-16);
+}
+
+.m-0 {
+  margin: 0;
+}
+.mt-8 {
+  margin-top: var(--space-8);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mx-8 {
+  margin-left: var(--space-8);
+  margin-right: var(--space-8);
+}
+.my-8 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.p-0 {
+  padding: 0;
+}
+.py-8 {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+.px-8 {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.px-16 {
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Dark mode specifics */
+[data-color-scheme="dark"] .btn--outline {
+  border: 1px solid var(--color-border-secondary);
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+/* END PERPLEXITY DESIGN SYSTEM */
+/* SIES Brand Colors */
+:root {
+  /* SIES Brand Color Overrides */
+  --sies-orange: #FF8C00;
+  --sies-orange-light: #FFA500;
+  --sies-orange-dark: #FF7F00;
+  --sies-turquoise: #40E0D0;
+  --sies-turquoise-light: #48EFDF;
+  --sies-turquoise-dark: #00CED1;
+  --sies-gold: #FFD700;
+  --sies-navy: #1a365d;
+  --sies-white: #ffffff;
+  --sies-light-bg: #f8fafc;
+  
+  /* Override primary colors with SIES brand */
+  --color-primary: var(--sies-orange);
+  --color-primary-hover: var(--sies-orange-dark);
+  --color-primary-active: var(--sies-orange-dark);
+  --color-secondary: var(--sies-turquoise);
+  --color-text: var(--sies-navy);
+  --color-text-secondary: #2d3748;
+}
+
+/* Additional styles for SIES Journal website */
+
+/* Edit Mode Controls */
+.edit-controls {
+  position: fixed;
+  top: var(--space-16);
+  right: var(--space-16);
+  z-index: 1000;
+  display: flex;
+  gap: var(--space-8);
+  background: var(--color-surface);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.edit-controls .btn {
+  font-size: var(--font-size-sm);
+  padding: var(--space-6) var(--space-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Style Panel */
+.style-panel {
+  position: fixed;
+  top: 80px;
+  right: var(--space-16);
+  z-index: 999;
+  width: 280px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.style-panel-content {
+  padding: var(--space-20);
+}
+
+.style-panel h3 {
+  margin-bottom: var(--space-16);
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.style-group {
+  margin-bottom: var(--space-16);
+}
+
+/* SIES Logo Design */
+.sies-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.logo-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.logo-sun {
+  width: 250px;
+  height: 150px;
+  position: relative;
+  background-image:url("https://siesascn.edu.in/images/sies_ascn_logo.jpg");
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+  
+}
+
+
+
+.sun-center {
+  position: relative;
+  z-index: 2;
+}
+
+.logo-text {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--sies-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-institution-text {
+  color: var(--sies-white);
+  margin-left: 160px;
+}
+
+.logo-institution-text h4 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo-institution-text p {
+  margin: var(--space-4) 0 0 0;
+  font-size: var(--font-size-md);
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gentle-glow {
+  from { box-shadow: 0 0 20px rgba(255, 140, 0, 0.4); }
+  to { box-shadow: 0 0 30px rgba(255, 140, 0, 0.6); }
+}
+
+/* Journal Header */
+.journal-header {
+  background: linear-gradient(135deg, var(--sies-turquoise-dark) 0%, var(--sies-turquoise) 50%, var(--sies-turquoise-light) 100%);
+  color: var(--sies-white);
+  padding: var(--space-32) 0 0;
+  box-shadow: 0 4px 20px rgba(64, 224, 208, 0.3);
+  position: relative;
+}
+
+.journal-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-24);
+  position: relative;
+  z-index: 1;
+}
+
+.journal-branding {
+  flex: 1;
+  text-align: right;
+}
+
+.journal-branding h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--sies-white);
+}
+
+.journal-subtitle {
+  font-size: var(--font-size-lg);
+  opacity: 0.95;
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: var(--sies-white);
+}
+
+/* Navigation */
+.main-navigation {
+  margin-top: 60px;
+  background: linear-gradient(90deg, var(--sies-orange) 0%, var(--sies-orange-light) 50%, var(--sies-gold) 100%);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 0 var(--space-24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-32);
+}
+
+.nav-link {
+  color: var(--sies-white);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-16) 0;
+  text-decoration: none;
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover {
+  color: var(--sies-navy);
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--sies-white);
+  transition: width var(--duration-normal) var(--ease-standard);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.search-input {
+  width: 200px;
+  padding: var(--space-8) var(--space-12);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-medium);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--sies-white);
+  background: var(--sies-white);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.search-btn {
+  padding: var(--space-8) var(--space-16);
+  background: var(--sies-white);
+  color: var(--sies-orange);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  transition: all var(--duration-normal) var(--ease-standard);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn:hover {
+  background: var(--sies-navy);
+  color: var(--sies-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Layout */
+.main-content {
+  padding: var(--space-32) 0;
+  background: var(--sies-light-bg);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-32);
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.content-section {
+  scroll-margin-top: 100px;
+}
+
+/* Enhanced Card Styles */
+.card {
+  background: var(--sies-white);
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 140, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.section-title {
+  color: var(--sies-navy);
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.content-text {
+  line-height: var(--line-height-normal);
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-medium);
+}
+
+.content-text p {
+  color: var(--sies-navy);
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  margin-bottom: var(--space-12);
+}
+
+.content-text h4 {
+  color: var(--sies-orange);
+  margin: var(--space-20) 0 var(--space-12) 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.content-text ul {
+  margin: var(--space-12) 0;
+  padding-left: var(--space-20);
+}
+
+.content-text li {
+  margin-bottom: var(--space-8);
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Journal Particulars with Special Styling */
+.particulars-header {
+  background: linear-gradient(90deg, var(--sies-orange) 0%, var(--sies-gold) 100%);
+  color: var(--sies-white);
+  border-bottom: none;
+}
+
+.particulars-header .section-title {
+  color: var(--sies-white);
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.particulars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+}
+
+.particular-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-16);
+  background: linear-gradient(135deg, rgba(64, 224, 208, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+  border-radius: var(--radius-base);
+  border: 2px solid rgba(255, 140, 0, 0.2);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.particular-item:hover {
+  border-color: var(--sies-orange);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.particular-item strong {
+  font-weight: var(--font-weight-bold);
+  color: var(--sies-orange);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.particular-item span {
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Enhanced Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, var(--sies-orange) 0%, var(--sies-gold) 100%);
+  color: var(--sies-white);
+  border: none;
+}
+
+.highlight-card .sidebar-title {
+  color: var(--sies-white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card .sidebar-links a {
+  color: var(--sies-white);
+  font-weight: var(--font-weight-semibold);
+  opacity: 0.9;
+}
+
+.highlight-card .sidebar-links a:hover {
+  opacity: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.news-card {
+  background: linear-gradient(135deg, rgba(64, 224, 208, 0.1) 0%, rgba(64, 224, 208, 0.2) 100%);
+  border: 2px solid var(--sies-turquoise);
+}
+
+.info-card {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.2) 100%);
+  border: 2px solid var(--sies-gold);
+}
+
+.sidebar-title {
+  color: var(--sies-navy);
+  margin-bottom: var(--space-12);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: var(--space-10);
+}
+
+.sidebar-links a {
+  color: var(--sies-navy);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--duration-normal) var(--ease-standard);
+  padding: var(--space-4) 0;
+  display: block;
+}
+
+.sidebar-links a:hover {
+  color: var(--sies-orange);
+  padding-left: var(--space-8);
+}
+
+.journal-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-12) 0;
+  border-bottom: 2px solid rgba(255, 140, 0, 0.2);
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-weight: var(--font-weight-bold);
+  color: var(--sies-navy);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-weight: var(--font-weight-bold);
+  color: var(--sies-orange);
+  font-size: var(--font-size-md);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: var(--space-32) 0;
+  background: linear-gradient(135deg, var(--sies-turquoise-light) 0%, var(--sies-turquoise) 100%);
+}
+
+.contact-card {
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.contact-header {
+  background: linear-gradient(90deg, var(--sies-turquoise-dark) 0%, var(--sies-turquoise) 100%);
+  color: var(--sies-white);
+  border-bottom: none;
+}
+
+.contact-header .section-title {
+  color: var(--sies-white);
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-12);
+  background: rgba(255, 140, 0, 0.05);
+  border-radius: var(--radius-base);
+  border-left: 4px solid var(--sies-orange);
+}
+
+.contact-item strong {
+  font-weight: var(--font-weight-bold);
+  color: var(--sies-orange);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-item span {
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-semibold);
+}
+
+.contact-form {
+  background: var(--sies-white);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(64, 224, 208, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  font-weight: var(--font-weight-medium);
+  color: var(--sies-navy);
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--sies-orange);
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+.contact-form .form-label {
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Enhanced Buttons */
+.btn--primary {
+  background: linear-gradient(90deg, var(--sies-orange) 0%, var(--sies-orange-light) 100%);
+  color: var(--sies-white);
+  border: none;
+  font-weight: var(--font-weight-bold);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(90deg, var(--sies-orange-dark) 0%, var(--sies-orange) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
+}
+
+.btn--secondary {
+  background: linear-gradient(90deg, var(--sies-turquoise) 0%, var(--sies-turquoise-light) 100%);
+  color: var(--sies-white);
+  border: none;
+  font-weight: var(--font-weight-bold);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--sies-orange);
+  color: var(--sies-orange);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--outline:hover {
+  background: var(--sies-orange);
+  color: var(--sies-white);
+}
+
+/* Footer */
+.journal-footer {
+  background: linear-gradient(135deg, var(--sies-navy) 0%, #0f2238 100%);
+  color: var(--sies-white);
+  padding: var(--space-32) 0 var(--space-20);
+  position: relative;
+}
+
+.journal-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sies-orange) 0%, var(--sies-gold) 50%, var(--sies-turquoise) 100%);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-32);
+  margin-bottom: var(--space-24);
+}
+
+.footer-section h4 {
+  margin-bottom: var(--space-12);
+  color: var(--sies-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--space-8);
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--duration-normal) var(--ease-standard);
+}
+
+.footer-section a:hover {
+  color: var(--sies-gold);
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: var(--font-weight-medium);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-20);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Edit Mode Styles */
+.edit-mode .editable {
+  position: relative;
+  min-height: 1.2em;
+  padding: var(--space-6);
+  border: 2px dashed transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.edit-mode .editable:hover {
+  border-color: var(--sies-orange);
+  background: rgba(255, 140, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
+}
+
+.edit-mode .editable:focus {
+  outline: 2px solid var(--sies-orange);
+  border-color: var(--sies-orange);
+  background: var(--sies-white);
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+}
+
+.edit-mode .editable::before {
+  content: "✎ Click to edit";
+  position: absolute;
+  top: -28px;
+  left: 0;
+  font-size: var(--font-size-xs);
+  color: var(--sies-white);
+  background: var(--sies-orange);
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+  pointer-events: none;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.edit-mode .editable:hover::before {
+  opacity: 1;
+}
+
+/* Style Variations */
+.bg-variant-bg-1 { background: var(--color-bg-1) !important; }
+.bg-variant-bg-2 { background: var(--color-bg-2) !important; }
+.bg-variant-bg-3 { background: var(--color-bg-3) !important; }
+.bg-variant-bg-4 { background: var(--color-bg-4) !important; }
+.bg-variant-bg-5 { background: var(--color-bg-5) !important; }
+
+.font-size-small { font-size: var(--font-size-sm) !important; }
+.font-size-large { font-size: var(--font-size-lg) !important; }
+.font-size-xl { font-size: var(--font-size-xl) !important; }
+
+.header-style-modern .journal-header {
+  background: linear-gradient(45deg, var(--sies-turquoise) 0%, var(--sies-turquoise-light) 100%);
+}
+
+.header-style-classic .journal-header {
+  background: var(--sies-navy);
+}
+
+.header-style-bold .journal-header {
+  background: linear-gradient(135deg, var(--sies-orange) 0%, var(--sies-gold) 100%);
+}
+
+/* Search highlighting */
+.search-highlight {
+  background: linear-gradient(90deg, var(--sies-gold) 0%, var(--sies-orange-light) 100%);
+  color: var(--sies-navy);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 2px 4px rgba(255, 140, 0, 0.3);
+}
+
+/* Status message */
+.status-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: var(--space-16) var(--space-24);
+  background: var(--sies-white);
+  border: 2px solid var(--sies-orange);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-standard);
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-semibold);
+}
+
+.status-message.show {
+  opacity: 1;
+}
+
+.status--success {
+  border-color: var(--sies-turquoise);
+  background: linear-gradient(135deg, rgba(64, 224, 208, 0.1) 0%, rgba(64, 224, 208, 0.2) 100%);
+}
+
+.status--error {
+  border-color: #e53e3e;
+  background: linear-gradient(135deg, rgba(229, 62, 62, 0.1) 0%, rgba(229, 62, 62, 0.2) 100%);
+}
+
+.status--info {
+  border-color: var(--sies-gold);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.2) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+  }
+  
+  .particulars-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+  
+  .sies-logo {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-12);
+  }
+}
+
+@media (max-width: 768px) {
+  .edit-controls {
+    position: static;
+    margin-bottom: var(--space-16);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .style-panel {
+    position: static;
+    width: 100%;
+    margin-bottom: var(--space-16);
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-20);
+    text-align: center;
+  }
+  
+  .journal-branding {
+    text-align: center;
+  }
+  
+  .journal-branding h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .main-navigation {
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-16);
+  }
+  
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+  
+  .search-container {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .search-input {
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .logo-container {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-text {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .edit-controls,
+  .style-panel,
+  .search-container,
+  .main-navigation {
+    display: none !important;
+  }
+  
+  .journal-header {
+    background: var(--sies-white) !important;
+    color: var(--sies-navy) !important;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .card {
+    break-inside: avoid;
+  }
+  
+  .content-section {
+    break-inside: avoid;
+    margin-bottom: var(--space-20);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility improvements */
+:focus-visible {
+  outline: 3px solid var(--sies-orange) !important;
+  outline-offset: 2px;
+}
+
+/* High contrast text ensures everything is visible */
+p, span, div {
+  color: var(--sies-navy);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sies-navy);
+  font-weight: var(--font-weight-bold);
+}
+
+    </style>
+</head>
+<body>
+ <script>
+    // SIES Journal of Humanities - Interactive Features
+class JournalEditor {
+    constructor() {
+        this.isEditMode = false;
+        this.init();
+        this.loadSavedData();
+    }
+
+    init() {
+        this.bindEvents();
+        this.setupSmoothScrolling();
+        this.setupSearch();
+        this.setupContactForm();
+    }
+
+    bindEvents() {
+        // Edit Mode Toggle
+        const editModeBtn = document.getElementById('editModeBtn');
+        editModeBtn.addEventListener('click', () => this.toggleEditMode());
+
+        // Style Panel Toggle
+        const styleToggleBtn = document.getElementById('styleToggleBtn');
+        const stylePanel = document.getElementById('stylePanel');
+        const closePanelBtn = document.getElementById('closePanelBtn');
+        
+        styleToggleBtn.addEventListener('click', () => {
+            stylePanel.classList.toggle('hidden');
+        });
+        
+        closePanelBtn.addEventListener('click', () => {
+            stylePanel.classList.add('hidden');
+        });
+
+        // Save Changes
+        const saveBtn = document.getElementById('saveBtn');
+        saveBtn.addEventListener('click', () => this.saveChanges());
+
+        // Style Panel Controls
+        this.bindStyleControls();
+
+        // Close style panel when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!stylePanel.contains(e.target) && 
+                !styleToggleBtn.contains(e.target) && 
+                !stylePanel.classList.contains('hidden')) {
+                stylePanel.classList.add('hidden');
+            }
+        });
+    }
+
+    toggleEditMode() {
+        this.isEditMode = !this.isEditMode;
+        const body = document.body;
+        const editModeBtn = document.getElementById('editModeBtn');
+        const editables = document.querySelectorAll('.editable');
+
+        if (this.isEditMode) {
+            body.classList.add('edit-mode');
+            editModeBtn.textContent = 'Exit Edit Mode';
+            editModeBtn.classList.remove('btn--primary');
+            editModeBtn.classList.add('btn--secondary');
+
+            // Enable editing
+            editables.forEach(element => {
+                element.contentEditable = true;
+                element.addEventListener('blur', () => this.handleContentChange(element));
+                element.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey && !element.matches('div, p')) {
+                        e.preventDefault();
+                        element.blur();
+                    }
+                });
+            });
+
+            this.showStatusMessage('Edit mode enabled. Click on any text to edit it.', 'success');
+        } else {
+            body.classList.remove('edit-mode');
+            editModeBtn.textContent = 'Enable Edit Mode';
+            editModeBtn.classList.remove('btn--secondary');
+            editModeBtn.classList.add('btn--primary');
+
+            // Disable editing
+            editables.forEach(element => {
+                element.contentEditable = false;
+            });
+
+            this.showStatusMessage('Edit mode disabled.', 'info');
+        }
+    }
+
+    bindStyleControls() {
+        const bgColorSelect = document.getElementById('bgColorSelect');
+        const fontSizeSelect = document.getElementById('fontSizeSelect');
+        const headerStyleSelect = document.getElementById('headerStyleSelect');
+
+        bgColorSelect.addEventListener('change', (e) => {
+            this.changeBackgroundStyle(e.target.value);
+        });
+
+        fontSizeSelect.addEventListener('change', (e) => {
+            this.changeFontSize(e.target.value);
+        });
+
+        headerStyleSelect.addEventListener('change', (e) => {
+            this.changeHeaderStyle(e.target.value);
+        });
+    }
+
+    changeBackgroundStyle(style) {
+        const body = document.body;
+        
+        // Remove existing background variants
+        body.classList.remove('bg-variant-bg-1', 'bg-variant-bg-2', 'bg-variant-bg-3', 'bg-variant-bg-4', 'bg-variant-bg-5');
+        
+        if (style) {
+            body.classList.add(`bg-variant-${style}`);
+        }
+
+        this.showStatusMessage(`Background changed to ${style || 'default'}.`, 'success');
+    }
+
+    changeFontSize(size) {
+        const body = document.body;
+        
+        // Remove existing font size variants
+        body.classList.remove('font-size-small', 'font-size-large', 'font-size-xl');
+        
+        if (size) {
+            body.classList.add(`font-size-${size}`);
+        }
+
+        this.showStatusMessage(`Font size changed to ${size || 'default'}.`, 'success');
+    }
+
+    changeHeaderStyle(style) {
+        const body = document.body;
+        
+        // Remove existing header style variants
+        body.classList.remove('header-style-modern', 'header-style-classic', 'header-style-bold');
+        
+        if (style) {
+            body.classList.add(`header-style-${style}`);
+        }
+
+        this.showStatusMessage(`Header style changed to ${style || 'default'}.`, 'success');
+    }
+
+    handleContentChange(element) {
+        // Mark as modified for saving
+        element.setAttribute('data-modified', 'true');
+        
+        // Auto-save after a delay
+        clearTimeout(this.autoSaveTimeout);
+        this.autoSaveTimeout = setTimeout(() => {
+            this.autoSave();
+        }, 2000);
+    }
+
+    saveChanges() {
+        const data = this.collectPageData();
+        try {
+            localStorage.setItem('sies_journal_data', JSON.stringify(data));
+            this.showStatusMessage('Changes saved successfully!', 'success');
+        } catch (error) {
+            console.error('Save failed:', error);
+            this.showStatusMessage('Failed to save changes. Please try again.', 'error');
+        }
+    }
+
+    autoSave() {
+        if (this.isEditMode) {
+            const data = this.collectPageData();
+            try {
+                localStorage.setItem('sies_journal_data', JSON.stringify(data));
+                this.showStatusMessage('Auto-saved', 'info');
+            } catch (error) {
+                console.warn('Auto-save failed:', error);
+            }
+        }
+    }
+
+    collectPageData() {
+        const data = {
+            content: {},
+            styles: {
+                background: this.getCurrentBackgroundStyle(),
+                fontSize: this.getCurrentFontSize(),
+                headerStyle: this.getCurrentHeaderStyle()
+            },
+            timestamp: new Date().toISOString()
+        };
+
+        // Collect all editable content
+        const editables = document.querySelectorAll('.editable');
+        editables.forEach((element, index) => {
+            const key = element.id || `editable_${index}`;
+            data.content[key] = element.innerHTML;
+        });
+
+        return data;
+    }
+
+    getCurrentBackgroundStyle() {
+        const body = document.body;
+        const bgClasses = ['bg-1', 'bg-2', 'bg-3', 'bg-4', 'bg-5'];
+        for (const bg of bgClasses) {
+            if (body.classList.contains(`bg-variant-${bg}`)) {
+                return bg;
+            }
+        }
+        return '';
+    }
+
+    getCurrentFontSize() {
+        const body = document.body;
+        const fontSizes = ['small', 'large', 'xl'];
+        for (const size of fontSizes) {
+            if (body.classList.contains(`font-size-${size}`)) {
+                return size;
+            }
+        }
+        return '';
+    }
+
+    getCurrentHeaderStyle() {
+        const body = document.body;
+        const headerStyles = ['modern', 'classic', 'bold'];
+        for (const style of headerStyles) {
+            if (body.classList.contains(`header-style-${style}`)) {
+                return style;
+            }
+        }
+        return '';
+    }
+
+    loadSavedData() {
+        try {
+            const savedData = localStorage.getItem('sies_journal_data');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                this.applySavedData(data);
+                this.showStatusMessage('Previous changes loaded.', 'info');
+            }
+        } catch (error) {
+            console.error('Failed to load saved data:', error);
+        }
+    }
+
+    applySavedData(data) {
+        // Apply content changes
+        if (data.content) {
+            const editables = document.querySelectorAll('.editable');
+            editables.forEach((element, index) => {
+                const key = element.id || `editable_${index}`;
+                if (data.content[key]) {
+                    element.innerHTML = data.content[key];
+                }
+            });
+        }
+
+        // Apply style changes
+        if (data.styles) {
+            if (data.styles.background) {
+                this.changeBackgroundStyle(data.styles.background);
+                document.getElementById('bgColorSelect').value = data.styles.background;
+            }
+            if (data.styles.fontSize) {
+                this.changeFontSize(data.styles.fontSize);
+                document.getElementById('fontSizeSelect').value = data.styles.fontSize;
+            }
+            if (data.styles.headerStyle) {
+                this.changeHeaderStyle(data.styles.headerStyle);
+                document.getElementById('headerStyleSelect').value = data.styles.headerStyle;
+            }
+        }
+    }
+
+    setupSmoothScrolling() {
+        const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    setupSearch() {
+        const searchBtn = document.getElementById('searchBtn');
+        const searchInput = document.getElementById('searchInput');
+
+        const performSearch = () => {
+            const query = searchInput.value.trim().toLowerCase();
+            if (query.length < 2) {
+                this.showStatusMessage('Please enter at least 2 characters to search.', 'error');
+                return;
+            }
+
+            this.highlightSearchResults(query);
+        };
+
+        searchBtn.addEventListener('click', performSearch);
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        searchInput.addEventListener('input', () => {
+            if (searchInput.value.trim() === '') {
+                this.clearSearchResults();
+            }
+        });
+    }
+
+    highlightSearchResults(query) {
+        // Clear previous highlights
+        this.clearSearchResults();
+
+        const walker = document.createTreeWalker(
+            document.querySelector('.main-content'),
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    return node.parentElement.tagName !== 'SCRIPT' &&
+                           node.parentElement.tagName !== 'STYLE' &&
+                           node.textContent.trim().length > 0
+                        ? NodeFilter.FILTER_ACCEPT
+                        : NodeFilter.FILTER_REJECT;
+                }
+            }
+        );
+
+        const textNodes = [];
+        let node;
+        while (node = walker.nextNode()) {
+            textNodes.push(node);
+        }
+
+        let matchCount = 0;
+        textNodes.forEach(textNode => {
+            const text = textNode.textContent;
+            const regex = new RegExp(`(${query})`, 'gi');
+            
+            if (regex.test(text)) {
+                const highlightedText = text.replace(regex, '<mark class="search-highlight">$1</mark>');
+                const span = document.createElement('span');
+                span.innerHTML = highlightedText;
+                textNode.parentNode.replaceChild(span, textNode);
+                matchCount++;
+            }
+        });
+
+        if (matchCount > 0) {
+            this.showStatusMessage(`Found ${matchCount} matches for "${query}".`, 'success');
+            
+            // Scroll to first match
+            const firstMatch = document.querySelector('.search-highlight');
+            if (firstMatch) {
+                firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        } else {
+            this.showStatusMessage(`No matches found for "${query}".`, 'info');
+        }
+    }
+
+    clearSearchResults() {
+        const highlights = document.querySelectorAll('.search-highlight');
+        highlights.forEach(highlight => {
+            const parent = highlight.parentNode;
+            parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+            parent.normalize();
+        });
+    }
+
+    setupContactForm() {
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+
+            // Simulate form submission
+            this.showStatusMessage('Thank you for your message! We will get back to you soon.', 'success');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // In a real application, you would send this data to a server
+            console.log('Contact form submitted:', data);
+        });
+    }
+
+    showStatusMessage(message, type = 'info') {
+        // Remove existing status messages
+        const existingMessages = document.querySelectorAll('.status-message');
+        existingMessages.forEach(msg => msg.remove());
+
+        const statusDiv = document.createElement('div');
+        statusDiv.className = `status-message status--${type}`;
+        statusDiv.textContent = message;
+        document.body.appendChild(statusDiv);
+
+        // Show message
+        setTimeout(() => {
+            statusDiv.classList.add('show');
+        }, 10);
+
+        // Hide message after delay
+        setTimeout(() => {
+            statusDiv.classList.remove('show');
+            setTimeout(() => {
+                if (statusDiv.parentNode) {
+                    statusDiv.remove();
+                }
+            }, 300);
+        }, 3000);
+    }
+
+    // Export functionality
+    exportAsHTML() {
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'sies_journal_modified.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        this.showStatusMessage('Website exported as HTML file.', 'success');
+    }
+
+    // Print functionality
+    printWebsite() {
+        window.print();
+    }
+
+    // SIES-specific enhancements
+    initSIESFeatures() {
+        this.addLogoAnimation();
+        this.setupThemeToggle();
+        this.enhanceVisibility();
+    }
+
+    addLogoAnimation() {
+        const logoSun = document.querySelector('.logo-sun');
+        if (logoSun) {
+            logoSun.addEventListener('mouseenter', () => {
+                logoSun.style.transform = 'rotate(15deg) scale(1.1)';
+                logoSun.style.transition = 'transform 0.3s ease-in-out';
+            });
+            
+            logoSun.addEventListener('mouseleave', () => {
+                logoSun.style.transform = 'rotate(0deg) scale(1)';
+            });
+        }
+    }
+
+    setupThemeToggle() {
+        // Add theme toggle for different SIES color combinations
+        const themeBtn = document.createElement('button');
+        themeBtn.className = 'btn btn--outline btn--sm';
+        themeBtn.textContent = 'Theme';
+        themeBtn.style.marginLeft = '8px';
+        
+        let currentTheme = 0;
+        const themes = ['default', 'gold', 'turquoise', 'navy'];
+        
+        themeBtn.addEventListener('click', () => {
+            currentTheme = (currentTheme + 1) % themes.length;
+            document.body.className = document.body.className.replace(/theme-\w+/g, '');
+            if (themes[currentTheme] !== 'default') {
+                document.body.classList.add(`theme-${themes[currentTheme]}`);
+            }
+            this.showStatusMessage(`Theme changed to ${themes[currentTheme]}.`, 'success');
+        });
+        
+        document.getElementById('editControls').appendChild(themeBtn);
+    }
+
+    enhanceVisibility() {
+        // Ensure all text has high contrast
+        const elements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6, li');
+        elements.forEach(el => {
+            const computedStyle = window.getComputedStyle(el);
+            const bgColor = computedStyle.backgroundColor;
+            const textColor = computedStyle.color;
+            
+            // If background is very light and text is also light, force dark text
+            if (this.isLightColor(bgColor) && this.isLightColor(textColor)) {
+                el.style.color = 'var(--sies-navy)';
+            }
+        });
+    }
+
+    isLightColor(color) {
+        // Simple function to determine if a color is light
+        // This is a basic implementation - could be more sophisticated
+        const rgb = color.match(/\d+/g);
+        if (rgb && rgb.length >= 3) {
+            const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+            return brightness > 155;
+        }
+        return false;
+    }
+}
+
+// Additional utility functions
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Add keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+    // Ctrl/Cmd + E for edit mode toggle
+    if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
+        e.preventDefault();
+        document.getElementById('editModeBtn').click();
+    }
+    
+    // Ctrl/Cmd + S for save
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault();
+        document.getElementById('saveBtn').click();
+    }
+    
+    // Escape to close panels
+    if (e.key === 'Escape') {
+        const stylePanel = document.getElementById('stylePanel');
+        if (!stylePanel.classList.contains('hidden')) {
+            stylePanel.classList.add('hidden');
+        }
+    }
+    
+    // Ctrl/Cmd + F for search
+    if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+        e.preventDefault();
+        const searchInput = document.getElementById('searchInput');
+        searchInput.focus();
+        searchInput.select();
+    }
+});
+
+// Enhanced scroll effects for SIES theme
+function addScrollEffects() {
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', debounce(() => {
+        const header = document.querySelector('.journal-header');
+        const scrolled = window.scrollY;
+        
+        if (scrolled > 100) {
+            header.style.boxShadow = '0 8px 32px rgba(64, 224, 208, 0.4)';
+        } else {
+            header.style.boxShadow = '0 4px 20px rgba(64, 224, 208, 0.3)';
+        }
+        
+        lastScrollY = scrolled;
+    }, 10));
+}
+
+// Initialize the journal editor when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.journalEditor = new JournalEditor();
+    
+    // Add SIES-specific features
+    window.journalEditor.initSIESFeatures();
+    
+    // Add scroll effects
+    addScrollEffects();
+    
+    // Add some additional functionality
+    const editControls = document.getElementById('editControls');
+    
+    // Add export button
+    const exportBtn = document.createElement('button');
+    exportBtn.className = 'btn btn--outline';
+    exportBtn.textContent = 'Export HTML';
+    exportBtn.addEventListener('click', () => {
+        window.journalEditor.exportAsHTML();
+    });
+    editControls.appendChild(exportBtn);
+    
+    // Add print button
+    const printBtn = document.createElement('button');
+    printBtn.className = 'btn btn--outline';
+    printBtn.textContent = 'Print';
+    printBtn.addEventListener('click', () => {
+        window.journalEditor.printWebsite();
+    });
+    editControls.appendChild(printBtn);
+    
+    // Show welcome message with SIES branding
+    setTimeout(() => {
+        window.journalEditor.showStatusMessage('Welcome to the vibrant SIES Journal of Humanities! Click "Enable Edit Mode" to start customizing.', 'success');
+    }, 1000);
+    
+    // Enhance visibility after page load
+    setTimeout(() => {
+        window.journalEditor.enhanceVisibility();
+    }, 500);
+});
+
+// Handle window resize for responsive behavior
+window.addEventListener('resize', debounce(() => {
+    const stylePanel = document.getElementById('stylePanel');
+    if (window.innerWidth <= 768 && !stylePanel.classList.contains('hidden')) {
+        stylePanel.classList.add('hidden');
+    }
+}, 250));
+
+// Add custom SIES interaction effects
+function addSIESInteractions() {
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px)';
+            card.style.boxShadow = '0 12px 30px rgba(255, 140, 0, 0.2)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(-2px)';
+            card.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+        });
+    });
+    
+    // Add click effect to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const ripple = document.createElement('span');
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            
+            button.style.position = 'relative';
+            button.style.overflow = 'hidden';
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+}
+
+// Add ripple animation CSS
+const rippleCSS = `
+    @keyframes ripple {
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+`;
+
+// Inject the ripple CSS
+const style = document.createElement('style');
+style.textContent = rippleCSS;
+document.head.appendChild(style);
+
+// Initialize SIES interactions after DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(addSIESInteractions, 100);
+});
+ </script>
+    
+  </div>
+    <!-- Header -->
+    <header class="journal-header">
+    
+        <div class="container">
+            <div class="header-content">
+                <div class="sies-logo">
+                    <div class="logo-container">
+                        <div class="logo-sun">
+                            <div class="sun-rays"></div>
+                            <div class="sun-center">
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-institution-text">
+                        <h4>SIES (Nerul) College of Arts, Science & Commerce</h4>
+                        <p>(Autonomous)</p>
+                    </div>
+                </div>
+                <div class="journal-branding">
+                    <h1 class="journal-title editable" contenteditable="false">SIES Journal of Humanities</h1>
+                    <p class="journal-subtitle editable" contenteditable="false">A Peer Reviewed Multi-Disciplinary Research Journal</p>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="main-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Journal</a></li>
+                    <li><a href="#submissions" class="nav-link">Submissions</a></li>
+                    <li><a href="#editorial" class="nav-link">Editorial Board</a></li>
+                    <li><a href="#archives" class="nav-link">Archives</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content Area -->
+                <div class="main-column">
+                    <!-- Home Section -->
+                    <section id="home" class="content-section">
+                        <div class="card">
+                            <div class="card__body">
+                                <h2 class="section-title editable" contenteditable="false">Welcome to SIES Journal of Humanities</h2>
+                                <div class="content-text editable" contenteditable="false">
+                                    <p>The SIES Journal of Humanities is a peer reviewed double-blind multi disciplinary annual online research journal (ISSN : 3048-9768 Online). It aims to bring interdisciplinary perspectives in social sciences to reflect on varied paradigms, perspectives, comprehensions and contemplations.</p>
+                                    <p>The journal is a step ahead to continue the legacy of the research culture of the institution. In addition, we focus on quality research across the globe serving sustainable development. We provide a robust and careful peer-review process in order to ensure the publication of world-class articles opening novel windows to humanities and making human life happy and cheerful.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- About Section -->
+                    <section id="about" class="content-section">
+                        <div class="card">
+                            <div class="card__body">
+                                <h2 class="section-title editable" contenteditable="false">About the Journal</h2>
+                                <div class="content-text editable" contenteditable="false">
+                                    <p>The SIES Journal of Humanities represents excellence in academic publishing, providing a platform for scholarly discourse across multiple disciplines within the humanities. Our commitment to rigorous peer review ensures the highest quality of published research.</p>
+                                    <p>We welcome submissions from researchers worldwide, fostering international collaboration and knowledge exchange in the humanities field.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Journal Particulars -->
+                    <section id="particulars" class="content-section">
+                        <div class="card">
+                            <div class="card__header particulars-header">
+                                <h2 class="section-title editable" contenteditable="false">Journal Particulars</h2>
+                            </div>
+                            <div class="card__body">
+                                <div class="particulars-grid">
+                                    <div class="particular-item">
+                                        <strong>Title:</strong>
+                                        <span class="editable" contenteditable="false">SIES Journal of Humanities</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Frequency:</strong>
+                                        <span class="editable" contenteditable="false">Annual</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>ISSN:</strong>
+                                        <span class="editable" contenteditable="false">3048-9768 (Online)</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Publisher:</strong>
+                                        <span class="editable" contenteditable="false">SIES College of Arts, Science & Commerce (Autonomous), Sion (W), Mumbai</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Chief Editor:</strong>
+                                        <span class="editable" contenteditable="false">Dr. Uma Shankar Maheswari</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Starting Year:</strong>
+                                        <span class="editable" contenteditable="false">2024</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Subject:</strong>
+                                        <span class="editable" contenteditable="false">Multidisciplinary</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Language:</strong>
+                                        <span class="editable" contenteditable="false">English</span>
+                                    </div>
+                                    <div class="particular-item">
+                                        <strong>Publication Format:</strong>
+                                        <span class="editable" contenteditable="false">Online</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Submissions Section -->
+                    <section id="submissions" class="content-section">
+                        <div class="card">
+                            <div class="card__body">
+                                <h2 class="section-title editable" contenteditable="false">Submissions</h2>
+                                <div class="content-text editable" contenteditable="false">
+                                    <p>We welcome high-quality research papers, review articles, and short communications in all areas of humanities. All submissions undergo rigorous double-blind peer review.</p>
+                                    <h4>Submission Guidelines:</h4>
+                                    <ul>
+                                        <li>Original research papers not published elsewhere</li>
+                                        <li>Word limit: 6000-8000 words</li>
+                                        <li>APA citation style</li>
+                                        <li>Abstract: 150-200 words</li>
+                                        <li>Keywords: 5-7 terms</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Editorial Board Section -->
+                    <section id="editorial" class="content-section">
+                        <div class="card">
+                            <div class="card__body">
+                                <h2 class="section-title editable" contenteditable="false">Editorial Board</h2>
+                                <div class="content-text editable" contenteditable="false">
+                                    <h4>Chief Editor</h4>
+                                    <p><strong>Dr. Uma Shankar Maheswari</strong><br>
+                                    SIES College of Arts, Science & Commerce</p>
+                                    
+                                    <h4>Associate Editors</h4>
+                                    <p>Information about associate editors and editorial board members will be updated here.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Archives Section -->
+                    <section id="archives" class="content-section">
+                        <div class="card">
+                            <div class="card__body">
+                                <h2 class="section-title editable" contenteditable="false">Archives</h2>
+                                <div class="content-text editable" contenteditable="false">
+                                    <p>Journal archives and past issues will be available here once published.</p>
+                                    <p><strong>Volume 1, 2024</strong> - Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <div class="card highlight-card">
+                            <div class="card__body">
+                                <h3 class="sidebar-title editable" contenteditable="false">Quick Links</h3>
+                                <ul class="sidebar-links">
+                                    <li><a href="#submissions">Submit Article</a></li>
+                                    <li><a href="#guidelines">Author Guidelines</a></li>
+                                    <li><a href="#review">Peer Review</a></li>
+                                    <li><a href="#contact">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="card news-card">
+                            <div class="card__body">
+                                <h3 class="sidebar-title editable" contenteditable="false">Latest News</h3>
+                                <div class="content-text editable" contenteditable="false">
+                                    <p><strong>Call for Papers 2024</strong><br>
+                                    Submissions are now open for Volume 1, 2024.</p>
+                                    <p><strong>Journal Launch</strong><br>
+                                    The SIES Journal of Humanities has been officially launched.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <div class="card info-card">
+                            <div class="card__body">
+                                <h3 class="sidebar-title editable" contenteditable="false">Journal Info</h3>
+                                <div class="journal-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">ISSN:</span>
+                                        <span class="stat-value editable" contenteditable="false">3048-9768</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Frequency:</span>
+                                        <span class="stat-value editable" contenteditable="false">Annual</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Language:</span>
+                                        <span class="stat-value editable" contenteditable="false">English</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="card contact-card">
+                <div class="card__header contact-header">
+                    <h2 class="section-title editable" contenteditable="false">Contact Us</h2>
+                </div>
+                <div class="card__body">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>Address:</strong>
+                                <span class="editable" contenteditable="false">SIES (NERUL) COLLEGE OF ARTS, SCIENCE AND COMMERCE (AUTONOMOUS)<br>
+Sri Chandrasekarendra Saraswati Vidyapuram,
+Plot I-C, Sector V,
+Nerul, Navi Mumbai 400706
+INDIA</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Phone:</strong>
+                                <span class="editable" contenteditable="false">Tel No.:<br>61196409, 61196410, 61196402, 61196413, 61196414, 61196415, 27708371</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <span class="editable" contenteditable="false">siesjournalofhumanities@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Website:</strong>
+                                <span class="editable" contenteditable="false">https://siesascn.edu.in/</span>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" class="form-control" name="subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="journal-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="editable" contenteditable="false">SIES Journal of Humanities</h4>
+                    <p class="editable" contenteditable="false">A Peer Reviewed Multi-Disciplinary Research Journal</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="editable" contenteditable="false">Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#submissions">Submissions</a></li>
+                        <li><a href="#editorial">Editorial Board</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="editable" contenteditable="false">Contact Info</h4>
+                    <p class="editable" contenteditable="false">Email: siesjournalofhumanities@gmail.com</p>
+                    <p class="editable" contenteditable="false">Phone: 61196409, 61196410, 61196402, 61196413, 61196414, 61196415, 27708371</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="editable" contenteditable="false">&copy; 2024 SIES College of Arts, Science & Commerce (Autonomous). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
